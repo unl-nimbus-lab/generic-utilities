@@ -1,3 +1,10 @@
+## Make the mimimal image a little more useful with these installations.
+# Needs internet (duh!). Can use share_internet.sh to do so, since other
+# methods like usb-wifi adapters probably won't work. Tested with Ubuntu
+# 16.04 (minimal) on kernel 4.14.
+#
+#   --aj / NimbusLab / Nov 4, 2019.
+
 # basic upgrades first:
 apt-get update && apt-get upgrade && apt-get dist-upgrade
 # kernel upgrade
