@@ -2,26 +2,26 @@
 Needs internet (duh!). Can use share_internet.sh to do so, since other
 methods like usb-wifi adapters probably won't work. Tested with Ubuntu
 16.04 (minimal) on kernel 4.14.
-
+>
 >   --aj / NimbusLab / Nov 4, 2019.
 
-** basic upgrades first:**
+#### Basic upgrades first:
 ```
 apt-get update && apt-get upgrade && apt-get dist-upgrade
 ```
-** kernel upgrade **
+#### Kernel upgrade:
 ```
 apt-get install linux-image-xu3
 reboot
 ```
 
-** linux headers needed for some modules (like librealsense) **
+#### Linux headers needed for some modules (like librealsense):
 ```
 apt-get install linux-headers-$(uname -r)
 reboot
 ```
 
-** install drivers for Odroid's GPU **
+#### Install drivers for Odroid's GPU:
 ```
 apt-get install mali-fbdev
 # other useful stuff
@@ -37,7 +37,7 @@ rosdep init
 rosdep update
 ```
 
-** install geographic lib, needed by mavros **
+**Install geographic lib, needed by mavros**
 ```
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 # make it executable, or call `bash install_geographiclib_datasets.sh`
